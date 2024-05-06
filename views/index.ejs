@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body>
+  <section class="prompt">
+
+    <h1>
+      <%= title %>
+    </h1>
+    <p>Welcome to the <%= title %> DAB system
+    </p>
+    <section class="home">
+      <a class="button" href="/login">Login</a>
+      <a class="button" href="/signup">Sign up</a>
+      <form action="/logout" method="post">
+        <button class="logout" type="submit">Sign out</button>
+      </form>
+    </section>
+  </section>
+</body>
+
+</html>

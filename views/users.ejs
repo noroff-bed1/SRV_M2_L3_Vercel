@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DAB</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/stylesheets/hotels.css" rel="stylesheet">
+</head>
+
+<body>
+	<h2 class="p-3">Users</h2>
+	<div class="list-group">
+		<% users.forEach(function(user) { %>
+			<div class="row px-3 py-1 w-100">
+				<span class="col py-1 bg-info">
+					<%=user.FirstName%>
+						<%=user.LastName%>
+				</span>
+				<a href="/users/<%=user.id%>" class="col btn btn-secondary"> Details</a>
+				<button class="btn-danger" onclick="deleteUser('/users',<%=JSON.stringify(user.id)%>)"> DELETE</button>
+			</div>
+			<% }); %>
+	</div>
+	<script src="../javascripts/deleteUser.js"></script>
+</body>
+
+</html>
